@@ -1,0 +1,13 @@
+
+<strong>Bienvenido </strong>
+  <p>
+    Usuario:<%= @user.name %><br>
+    Email:<%= @user.email %><br>
+  </p>
+
+  <div>
+    <form action="/users/<%= @user.id %>/edit" method="GET">
+      <input  class="chulada_btn" type="submit" value="Editar">
+    </form>
+  </div>
+<div id="clear"></div>
