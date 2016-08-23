@@ -2,8 +2,145 @@
   margin: 20px auto;
   width: 600px;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  /* border: 1px dotted black; */
+  border-radius: 8px;
+  background: linear-gradient(#FFFFFF, rgba(150,7,255,0.4)); /* Standard syntax */
 }
 th {
   text-align: left;
+}
+
+/* Codiguillo Laurita */
+hr {
+  background-color: transparent;
+  height: 5px;
+  border-radius: 3px;
+  width: 100%;
+}
+
+#clear {
+  clear: left;
+  height: 1px;
+  margin-top: -1px;
+ }
+
+
+#form_submit {
+  margin-top: 40px;
+  margin-left: auto;
+  margin-bottom: 60px;
+  margin-right: auto;
+  width: 90%;
+  height: 30%;
+  background-color: #9607FF;
+  background: linear-gradient(rgba(135,109,251,0.6), rgba(106,86,197,0.1)); /* Standard syntax */
+  border-radius: 5px; 
+} 
+
+#form_submit form textarea{
+  
+  margin: 15px 10px;
+  width: 95%;
+  height: 20%;
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+
+.chulada_btn {
+  float: left;
+  margin: 5px 3px;
+  border-radius: 5px;
+  border: 1px solid #9670FF;
+  text-decoration: none;
+  text-align: center;
+  /* background: linear-gradient(rgba(150,7,255,0.2), rgba(255,255,255,0.3), rgba(255,255,255,1)); */
+  color: #330099;
+  background: transparent;
+  /* rosita #FF70FF */
+  /* lilita #9670FF */
+  /* verde claritoup  #50FF90*/
+  /* background: linear-gradient(#FFFFFF, rgba(150,112,255,0.4)); */
+}
+
+#div_hide {
+  display: none; /* para que permanezca oculto hasta usarlo */
+}
+
+#show, #hide {
+  cursor: pointer;
+}
+
+ul li{
+  list-style-type: square; 
+}
+/*
+a:link - a normal, unvisited link
+a:visited - a link the user has visited
+a:hover - a link when the user mouses over it
+a:active - a link the moment it is clicked
+*/
+
+/* Para cualquier link */
+a{
+  font-family: monospace;
+  font-size: 1.3em;
+  color: #9607FF;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #9670FF;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+a:active {
+    color: white;
+    background-color: #9670FF;
+    text-decoration: underline;
+}
+
+
+/* links de preguntas */
+#body_question_link{
+  font-family: monospace;
+  font-size: 1em;
+  color: black;
+}
+
+.login_sing{
+  font-size: 1.8em;
+  margin: 0 auto;
+  padding: 0px 8px;
+}
+#login_sing{
+  float: right;
+}
+
+.nav_bar{
+  margin: 0 auto;
+  height: 30px;
+  background-color: #9607FF;
+  background: linear-gradient( rgba(150,7,255,0.4), #FFFFFF); /* Standard syntax */ 
+  font-family: monospace;
+  color: white;
+}
+
+.question_input {
+  width: 95%;
+}
+
+.fieldset_legend{
+  color: #330099;
+  font-family: "Lucida Console";
+  font-style: italic;
+  background: transparent;
+  background: linear-gradient( transparent, rgba(225,225,225,0.2));
 }
