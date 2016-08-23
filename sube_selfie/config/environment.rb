@@ -20,7 +20,9 @@ require "sinatra/reloader" if development?
 
 require 'erb'
 
+require 'carrierwave'
 require 'carrierwave/orm/activerecord'
+require 'mini_magick'
 
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
 
@@ -29,7 +31,13 @@ APP_NAME = APP_ROOT.basename.to_s
 # Configura los controllers y los helpers
 Dir[APP_ROOT.join('app', 'controllers', '*.rb')].each { |file| require file }
 Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
+# Revisa que el folder de uploaders este contemplado el la configuración del app
 Dir[APP_ROOT.join('app', 'uploaders', '*.rb')].each { |file| require file }
 
 # Configura la base de datos y modelos 
 require APP_ROOT.join('config', 'database')
+
+#Configuración global de todos los uploaders de CarrierWave
+CarrierWave.configure do |config|
+  config.root = APP_ROOT + 'public/'
+end
