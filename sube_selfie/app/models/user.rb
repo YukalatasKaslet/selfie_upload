@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   include BCrypt  
   # Remember to create a migration!
-  mount_uploader :avatar, AvatarUploader
+  #mount_uploader :avatar, AvatarUploader
 
 
 
