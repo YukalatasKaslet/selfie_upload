@@ -1,19 +1,32 @@
 <h1>Welcome to Selfie!</h1>
+<div id="form_submit">
+  <!--Verificar que sea post, y que tenga el atributo enctype-->
+  <form method="post" enctype='multipart/form-data' action="/upload">
+    <!--Verificar que name corresponda al nombre/campo del modelo-->
+    <input type='file' name='photo[photo]' class="chulada_btn">
+    <br id="clear">
+    <input type='submit' value='Upload!' class="chulada_btn" id="submit-btn">
+  </form>
+</div>
+<br>
+<div id="clear"></div>
 
-# Verificar que sea post, y que tenga el atributo enctype
-<form method="post" enctype='multipart/form-data' action="/upload">
-  # Verificar que name corresponda al nombre/campo del modelo
-  <input type='file' name='photo[photo]'>
-  <br/>
-  <input type='submit' value='Upload!'>
-</form>
+<% if @photos %>
+  <div class="slider_controls">
+    <a href="#" id="previous_frame">&lt;</a>
+    <a href="#" id="next_frame">&gt;</a>
+  </div>
 
-<ul>
-  <% if @photos %>
-  <% @photos.each do |photo| %>
-    <div> 
-      <img src="<%= photo.photo_url(:thumb) %>">
-    </div>
-  <% end %>
-  <% end %>
-</ul>
+  <div class="container_slider">
+    <ul class="frames">
+      <% @photos.each do |photo| %>
+        <li> 
+          <img src="<%= photo.photo_url(:thumb) %>">
+        </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/slider.js"></script>

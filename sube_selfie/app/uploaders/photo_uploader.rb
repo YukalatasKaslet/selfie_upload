@@ -22,7 +22,7 @@ class PhotoUploader < CarrierWave::Uploader::Base
 
   #version :web do                              #Tamaño
     version :thumb   do process resize_to_fit: [600, 600]     end
-    version :preview do process resize_to_fit: [128, 128]     end
+    version :preview do process resize_to_fit: [150, 150]     end
     version :full    do process resize_to_fit: [1024, 768]    end
   #end
 

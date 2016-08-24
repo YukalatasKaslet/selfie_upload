@@ -1,0 +1,72 @@
+/* Codiguillo del slider */
+.container_slider{
+  overflow: hidden;/*  para que los elementos que esten fuera se oculten */
+  width: 100%;
+}
+
+.frames {
+  display: flex;/*Yo lo añadí*/
+  position: relative;
+  left: 0;
+  width: 300%; /* Porque son 3 imagenes */
+  list-style: none;
+  overflow: hidden;
+  float: left;
+  /*Chrom default padding for ul is 40px */
+  padding:0px;
+  margin:0px;
+}
+
+.frames > li {
+  list-style-type: none;
+  position: relative;/*con esto ya se ve el <h2> */
+  float: left;
+  width: 33.33333%; /* (100 / número de imágenes) */
+}
+
+.container_slider img {
+  display:block;
+  width:100%;
+  max-width:100%;
+}
+
+.container_slider h2 {
+  font-size:1em;
+  padding:0.5em;
+  position:absolute;
+  bottom:10px;
+  left:10px;
+  text-align:left;
+  margin: 0;
+  color: black;
+  border-radius: 50px;
+  /*background-color:rgba(99,0,0,0.75);*/
+  background-color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+
+.slider_controls a {
+  font-family: monospace;
+  text-decoration: none;
+  position: absolute;
+  /*margin-top: 99px;*/
+  margin-top: 180px;
+  width: 30px;
+  line-height: 30px;
+  background-color: #eee;
+  /*border: 1px solid #ddd;*/
+  border-radius: 30px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #7F7F7F;
+}
+
+a#previous_frame {
+  margin-left: -50px;
+}
+
+a#next_frame {
+  /*margin-left: 380px;*/
+  margin-left: 640px;
+}
