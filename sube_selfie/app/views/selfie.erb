@@ -1,13 +1,21 @@
 <h1>Welcome to Selfie!</h1>
-<div id="form_submit">
-  <!--Verificar que sea post, y que tenga el atributo enctype-->
-  <form method="post" enctype='multipart/form-data' action="/upload">
-    <!--Verificar que name corresponda al nombre/campo del modelo-->
-    <input type='file' name='photo[photo]' class="chulada_btn">
-    <br id="clear">
-    <input type='submit' value='Upload!' class="chulada_btn" id="submit-btn">
-  </form>
-</div>
+<% if current_user %>
+  <div id="form_submit">
+    <!--Verificar que sea post, y que tenga el atributo enctype-->
+    <form method="post" enctype='multipart/form-data' action="/upload">
+      <!--Verificar que name corresponda al nombre/campo del modelo-->
+      <input type='file' name='photo[photo]' class="chulada_btn">
+      <br id="clear">
+      <input type='submit' value='Upload!' class="chulada_btn" id="submit-btn">
+    </form>
+  </div>
+<% else %>
+  <p>
+    <strong>
+      Inicia sesión para subir imágenes
+    </strong>
+  </p>
+<% end %>
 <br>
 <div id="clear"></div>
 

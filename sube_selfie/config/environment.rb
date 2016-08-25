@@ -20,6 +20,8 @@ require "sinatra/reloader" if development?
 
 require 'erb'
 
+require 'bcrypt'
+
 require 'carrierwave'
 require 'carrierwave/orm/activerecord'
 require 'mini_magick'
