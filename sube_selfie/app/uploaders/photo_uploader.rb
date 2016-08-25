@@ -1,4 +1,5 @@
 #require 'carrierwave/processing/mini_magick'
+#investigar bien el require de arriba
 class PhotoUploader < CarrierWave::Uploader::Base
   # ...
   include CarrierWave::MiniMagick
