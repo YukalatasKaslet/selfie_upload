@@ -1,3 +1,4 @@
+#require 'carrierwave/processing/mini_magick'
 class PhotoUploader < CarrierWave::Uploader::Base
   # ...
   include CarrierWave::MiniMagick
@@ -20,10 +21,14 @@ class PhotoUploader < CarrierWave::Uploader::Base
   #  version :full    do   process resize_to_fit: [2048, 2048] end
   #end
 
-  #version :web do                              #Tamaño
-    version :thumb   do process resize_to_fit: [600, 600]     end
-    version :preview do process resize_to_fit: [150, 150]     end
-    version :full    do process resize_to_fit: [1024, 768]    end
+  #version :web do               #Tamaño
+    version :thumb   do
+      process :resize_to_fit => [50, 30]
+     # process :convert => 'jpg'
+    end
+
+    #version :preview do process resize_to_fit: [150, 150]     end
+    #version :full    do process resize_to_fit: [1024, 768]    end
   #end
 
   def extension_white_list
